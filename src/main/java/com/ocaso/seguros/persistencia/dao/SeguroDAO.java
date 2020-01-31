@@ -7,7 +7,7 @@ import com.ocaso.seguros.modelo.Seguro;
 
 public interface SeguroDAO extends GenericDAO<Seguro, Integer> {
 
-	
-	
+	public List<Object[]> findNifNombre();
+	public Seguro findByName(String nombre, String apellido1, String apellido2);
 	
 }

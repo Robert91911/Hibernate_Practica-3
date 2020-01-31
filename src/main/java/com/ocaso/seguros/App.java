@@ -19,7 +19,13 @@ public class App
             SeguroController sc = new SeguroController();
 //            AsistenciaController ac = new AsistenciaController();
             SeguroController seguro = new SeguroController();
-            seguro.mostrarSeguros();
+            
+            
+//            seguro.mostrarSeguros();
+//            seguro.mostrarNifNombres();
+            seguro.mostrarNIFporNombres();
+            
+            
         } catch (Exception e) {
             if (em != null) {
                 System.out.println("Se va a hacer rollback de la transacción");
