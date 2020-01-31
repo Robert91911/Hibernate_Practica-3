@@ -2,6 +2,7 @@ package com.ocaso.seguros;
 
 import javax.persistence.EntityManager;
 
+import com.ocaso.seguros.controlador.AsistenciaController;
 import com.ocaso.seguros.controlador.SeguroController;
 import com.ocaso.seguros.persistencia.jpa.Utilidades;
 
@@ -16,14 +17,16 @@ public class App
 
         try {
             em = Utilidades.getEntityManagerFactory().createEntityManager();
-            SeguroController sc = new SeguroController();
-//            AsistenciaController ac = new AsistenciaController();
+            AsistenciaController asistencia = new AsistenciaController();
             SeguroController seguro = new SeguroController();
-            
+           
             
 //            seguro.mostrarSeguros();
 //            seguro.mostrarNifNombres();
-            seguro.mostrarNIFporNombres();
+//            seguro.mostrarNIFporNombres();
+//            asistencia.mostrarAsistenciaSuperiorA();
+//            asistencia.mostrarAsistenciaEntre();
+            
             
             
         } catch (Exception e) {
