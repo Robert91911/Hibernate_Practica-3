@@ -20,13 +20,16 @@ public class App
             AsistenciaController asistencia = new AsistenciaController();
             SeguroController seguro = new SeguroController();
            
-            
+            //Cada ejercicio en una linea
 //            seguro.mostrarSeguros();
 //            seguro.mostrarNifNombres();
 //            seguro.mostrarNIFporNombres();
 //            asistencia.mostrarAsistenciaSuperiorA();
 //            asistencia.mostrarAsistenciaEntre();
-            
+//            asistencia.mostrarSumaImportes();
+//            asistencia.mostrarSaldoMedio();
+//            seguro.mostrarNumeroSeguros();
+//            seguro.mostrarNIFyAsistencias();
             
             
         } catch (Exception e) {

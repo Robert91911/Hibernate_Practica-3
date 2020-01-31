@@ -41,6 +41,28 @@ public class AsistenciaDAOImpJpa extends GenericDAOImplJpa<Asistencia,Integer> i
 		return lista;
 		
 	}
+
+	@Override
+	public BigDecimal findSumaImportes() {
+		EntityManager em = Utilidades.getEntityManagerFactory().createEntityManager();
+		BigDecimal b =  (BigDecimal) em.createQuery(
+				"select sum(A.importe) " +
+				"from Asistencia A ")
+				.getSingleResult()
+			;
+		return b;
+	}
+
+	@Override
+	public double findSaldoMedio() {
+		EntityManager em = Utilidades.getEntityManagerFactory().createEntityManager();
+		double b =  (double) em.createQuery(
+				"select avg(A.importe) " +
+				"from Asistencia A ")
+				.getSingleResult()
+			;
+		return b;
+	}
 	
 	
 

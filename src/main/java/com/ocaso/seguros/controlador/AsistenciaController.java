@@ -28,4 +28,14 @@ public class AsistenciaController {
 			System.out.println("idAsistenciaMedica: " + a.getId());
     	}
 	}
+	
+	public void mostrarSumaImportes() {
+		BigDecimal b = asistenciaDAO.findSumaImportes();
+    	System.out.println("Suma de los importes: " + b);
+	}
+	
+	public void mostrarSaldoMedio() {
+    	double b = asistenciaDAO.findSaldoMedio();
+    	System.out.println("Media del saldo" + b);
+	}
 }

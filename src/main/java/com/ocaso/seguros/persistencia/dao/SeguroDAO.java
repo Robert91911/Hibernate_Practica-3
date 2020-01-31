@@ -9,5 +9,7 @@ public interface SeguroDAO extends GenericDAO<Seguro, Integer> {
 
 	public List<Object[]> findNifNombre();
 	public Seguro findByName(String nombre, String apellido1, String apellido2);
+	public long findNumeroSeguros();
+	public List<Object[]> findNIFyAsistencias();
 	
 }

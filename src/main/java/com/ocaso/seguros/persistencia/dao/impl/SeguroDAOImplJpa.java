@@ -37,4 +37,29 @@ public class SeguroDAOImplJpa extends GenericDAOImplJpa<Seguro,Integer> implemen
 			.getSingleResult();
 		return seguro;
 	}
+
+	@Override
+	public long findNumeroSeguros() {
+		EntityManager em = Utilidades.getEntityManagerFactory().createEntityManager();
+		Long n =  (Long) em.createQuery(
+				"select count(S) " +
+				"from Seguro S ")
+				.getSingleResult()
+			;
+		return n;
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Object[]> findNIFyAsistencias() {
+		EntityManager em = Utilidades.getEntityManagerFactory().createEntityManager();
+		List<Object[]> lista =  (List<Object[]>) em.createQuery(
+				"select  S.nombre,S.nif,count(*) " +
+				"from Seguro S  join Asistencia A on S.id=A.seguro group by S.id"
+				)
+				.getResultList()
+			;
+		
+		return lista;
+	}
 }

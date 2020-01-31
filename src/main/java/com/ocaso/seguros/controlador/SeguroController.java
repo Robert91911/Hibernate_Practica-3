@@ -37,4 +37,19 @@ public class SeguroController {
 		Seguro seguro = seguroDAO.findByName("Maria", "Garcia", "Lozano");
 		System.out.println("NIF: " + seguro.getNif());
 	}
+	
+	public void mostrarNumeroSeguros() {
+	  	Long i = seguroDAO.findNumeroSeguros();
+    	System.out.println("Numero de seguros: " +i);
+	}
+	
+	public void mostrarNIFyAsistencias() {
+    	List<Object[]> lista= seguroDAO.findNIFyAsistencias();
+    	for(Object[] o : lista) {
+    		System.out.println("Nombre seguro: " + o[0]);
+    		System.out.println("Nif: " + o[1]);
+    		System.out.println("Nº Asistencias: " + o[2]);
+    		
+    	}
+	}
 }
