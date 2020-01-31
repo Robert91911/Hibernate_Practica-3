@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public class Utilidades {
 	
-	    private static final String PERSISTENCE_UNIT_NAME = "MavenJPA";
+	    private static final String PERSISTENCE_UNIT_NAME = "Seguros";
 	    
 	    private static EntityManagerFactory factory;
 	    

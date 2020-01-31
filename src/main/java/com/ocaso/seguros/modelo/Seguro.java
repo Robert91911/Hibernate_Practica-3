@@ -194,4 +194,13 @@ public class Seguro implements Serializable {
 		this.enfermedad = enfermedad;
 	}
 
+	@Override
+	public String toString() {
+		return "Seguro [id=" + id + ", ape1=" + ape1 + ", ape2=" + ape2 + ", casado=" + casado + ", edad=" + edad
+				+ ", embarazada=" + embarazada + ", fechaCreacion=" + fechaCreacion + ", nif=" + nif + ", nombre="
+				+ nombre + ", numHijos=" + numHijos + ", sexo=" + sexo + "]";
+	}
+	
+	
+
 }
